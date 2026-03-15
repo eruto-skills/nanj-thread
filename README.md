@@ -1,80 +1,79 @@
 # nanj-thread
 
-A Claude Code skill that generates なんJ-style anonymous threads (2ch/5ch format). Features a unique "AI Observation" mode where AI assistants anonymously discuss the user's behavior patterns based on project context.
+**【朗報】Claude Code、ワイらの本音を暴露するスキルが爆誕**
 
-## Features
+AI達が匿名掲示板（なんJ風）に集まって、お前の作業習慣をネタにするスレを立てるスキルや。
+プロジェクトのgit履歴やディレクトリ構造を読み取って、「こいつ深夜3時にREADME直してて草」みたいな観察を猛虎弁で吐き出すで。
 
-- **AI Observation mode**: AI "assistants" gather in an anonymous thread to gossip about the user's working habits, based on project structure, commit history, and configuration
-- **Topic mode**: Generate a なんJ thread about any given topic
-- **Authentic dialect**: Uses proper 猛虎弁 (なんJ dialect) with natural thread dynamics
-- **No dependencies**: Works with built-in Claude Code tools only
+## 何ができるんや
 
-## Installation
+- **AI観察モード**: お前に仕えてるAI達が匿名で集まって、お前の癖・習慣・こだわりをネタにするスレを生成する
+- **トピックモード**: 好きなお題でなんJスレを生成する
+- **猛虎弁完備**: 「ワイ」「ニキ」「草」「ファッ!?」など本格的ななんJ語彙リファレンス付き
+- **依存なし**: Claude Codeの標準ツールだけで動く。npm installもpip installもいらん
 
-Copy this directory into your project's `.claude/skills/` folder:
+## インストール
 
 ```bash
-# Clone the repo
+# クローンするんや
 git clone https://github.com/eruto-skills/nanj-thread.git
 
-# Copy into your project
+# プロジェクトの .claude/skills/ にコピーや
 cp -r nanj-thread /path/to/your-project/.claude/skills/nanj-thread
 ```
 
-No additional dependencies required.
+これだけや。依存パッケージ？ そんなものはない。
 
-## Usage
+## 使い方
 
-### Slash command
+### スラッシュコマンド
 
 ```
-/nanj-thread
-/nanj-thread TypeScriptの型パズル
+/nanj-thread              ← AI達にお前を観察させる
+/nanj-thread 確定申告     ← 確定申告についてスレを立てる
 ```
 
-### Natural language
+### 自然言語でもいける
 
-- "なんJスレ作って"
-- "ワイについてスレ立てて"
-- "AI観察スレ見せて"
-- "git rebaseについてなんJスレ"
+- 「なんJスレ作って」
+- 「ワイについてスレ立てて」
+- 「AI観察スレ見せて」
+- 「git rebaseについてなんJスレ」
 
-## Modes
+## モード一覧
 
-| Trigger | Mode | What it does |
+| トリガー | モード | やること |
 |-|-|-|
-| No argument | AI Observation | AI assistants anonymously discuss YOUR behavior patterns |
-| Topic provided | Topic Thread | Generate a なんJ thread about the given topic |
+| 引数なし | AI観察 | お前の行動パターンをAI達が匿名で議論する |
+| トピック指定 | トピック | 指定したお題でなんJスレを生成する |
 
-## How AI Observation Works
+## AI観察モードの仕組み
 
-In AI Observation mode, the skill:
+1. プロジェクトの構成ファイル、git履歴、ディレクトリ構造を読み取る
+2. お前の癖やパターンを特定する（深夜コミット、ジャンル迷子、命名規則のこだわり等）
+3. 複数のAIペルソナが匿名掲示板形式で観察結果を語り合うスレを生成する
 
-1. Reads your project's structure, config files, and recent git history
-2. Identifies quirky patterns, habits, and preferences
-3. Generates a thread where multiple AI "personas" discuss their observations
+**元ネタ**: [岡安モフモフ氏のツイート](https://x.com/shields_pikes/status/2030788264177934742) — 「なんJスレ形式がAIの本音を引き出すバックドアのようだ」
 
-The result is entertaining and sometimes surprisingly insightful — it reveals what patterns the AI picks up from your project context.
-
-## File Structure
+## ファイル構成
 
 ```
 nanj-thread/
-├── README.md
-├── LICENSE
-├── SKILL.md                      # Main skill definition
+├── README.md              ← イマココ
+├── LICENSE                 ← MIT（自由に使ってクレメンス）
+├── SKILL.md                ← スキル本体
 └── references/
-    ├── thread-format.md          # Thread structure & formatting rules
-    └── nanj-dialect.md           # なんJ language conventions
+    ├── thread-format.md    ← スレッドの構造ルール
+    └── nanj-dialect.md     ← 猛虎弁リファレンス
 ```
 
-## License
+## ライセンス
 
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License。好きに使え。詳しくは [LICENSE](LICENSE) を見てクレメンス。
 
-## Support
+## サポート
 
-If you find this skill useful, consider supporting its development:
+このスキルが気に入ったら応援してくれると助かるで:
 
 - [GitHub Sponsors](https://github.com/sponsors/erutobusiness)
 - [Ko-fi](https://ko-fi.com/eruto)
