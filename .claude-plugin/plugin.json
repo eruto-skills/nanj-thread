@@ -1,0 +1,21 @@
+{
+  "name": "nanj-thread",
+  "description": "Generate a Japanese anonymous-forum (なんJ / 2ch / 5ch) style thread where fictitious commenters observe and riff on the user, a project, or a given topic. For creative-writing and parody use.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Eruto Kondo",
+    "email": "erutobusiness@gmail.com"
+  },
+  "homepage": "https://github.com/eruto-skills/nanj-thread",
+  "repository": "https://github.com/eruto-skills/nanj-thread",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-code-skill",
+    "creative-writing",
+    "japanese",
+    "parody",
+    "nanj",
+    "2ch"
+  ]
+}
